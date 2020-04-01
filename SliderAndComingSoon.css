@@ -1,0 +1,231 @@
+.slider-soon {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-soon .cont {
+  overflow: hidden;
+  display: grid;
+  margin: 0 10%;
+  padding-top: 100px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.slider-soon .slider {
+  position: relative;
+  width: 100%;
+  min-width: 600px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .slider-soon .cont {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 15px;
+  }
+}
+
+.slider-soon .slider img {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-soon .soon {
+  overflow: hidden;
+  color: white;
+  margin-left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-soon .soon h1 {
+  text-align: center;
+  color: var(--normalColor);
+  min-width: 200px;
+  font-size: 20px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slider-soon .soon h1:hover {
+  color: white;
+}
+
+.slider-soon .soon ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.slider-soon .soon li {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.slider-soon .soon li div {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider-soon .soon img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.button-left {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button-right {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: blue;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-soon .circles {
+  position: absolute;
+  display: inline-flex;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 25px;
+  transform: translateX(-50%);
+}
+
+.slider-soon .circles .circle {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px white solid;
+  margin: 0 5px;
+  border-radius: 25px;
+}
+
+/*my design*/
+.slidershow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.navigation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  display: flex;
+}
+
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid var(--normalColor);
+  border-radius: 5px;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.bar:hover {
+  background: #fff;
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#r1:checked~.s1 {
+  margin-left: 0%;
+}
+
+#r2:checked~.s1 {
+  margin-left: -20%;
+}
+
+#r3:checked~.s1 {
+  margin-left: -40%;
+}
+
+#r4:checked~.s1 {
+  margin-left: -60%;
+}
+
+#r5:checked~.s1 {
+  margin-left: -80%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .slider-soon .soon {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 755px) {
+  .slider-soon .slider {
+    min-width: 0px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 5px;
+    margin: 10px;
+  }
+
+  .slide img {
+    object-fit: cover;
+    object-position: 0px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .slider-soon .cont {
+    grid-template-columns: 1fr;
+    grid-template-rows: .9fr 1fr;
+  }
+
+  .slidershow {
+    height: 100%;
+  }
+
+  .navigation {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: flex;
+  }
+}
